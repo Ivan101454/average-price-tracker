@@ -1,0 +1,11 @@
+package by.ivan101454.averagepricetracker.price.dto;
+
+import java.math.BigDecimal;
+import java.time.Instant;
+
+public record PriceResponse(
+        String symbol,
+        BigDecimal price,
+        Instant fetchedAt
+) {
+}

@@ -1,4 +1,4 @@
-package by.ivan101454.average_price_tracker;
+package by.ivan101454.averagepricetracker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

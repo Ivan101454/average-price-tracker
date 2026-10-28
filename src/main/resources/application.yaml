@@ -1,3 +1,20 @@
+binance:
+  api:
+    url: https://api.binance.com
+  poll-interval: ${BINANCE_POLL_INTERVAL:PT30S}
+  price-fetch-initial-delay-ms: ${BINANCE_POLL_INTERVAL:PT5S}
+  default-symbol: ${APP_DEFAULT_SYMBOL:BNBUSDT}
 spring:
   application:
     name: average-price-tracker
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/average_price}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
